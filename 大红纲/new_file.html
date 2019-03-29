@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>大红纲</title>
+		<link rel="stylesheet" type="text/css" href="new_file.css"/>
+		<script src="ajax.js"></script>
+		<script src="jq.js"></script>
+	</head>
+	<body>
+		<!--头标-->
+		<div class="head">
+			<div class="head-left">
+				<div class="pic"><img src="2.png" alt="" /></div>
+				<ul class="data">
+					<li>
+						2019年3月21日星期四
+					</li>
+					<li class="popo">
+						<div class="aa"></div>
+						<div class="aa1"></div>
+						<div class="bb">
+							<a href="">
+								新闻客户端
+							</a>
+							<span>|</span>
+							<a href="">LED屏</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="head-right">
+				<ul>
+					<li>
+						<img src="image/03.png" alt="" />
+						<div class="a">
+							<a href="">遇见</a>
+						</div>
+					</li>
+					<li>
+						<img src="image/04.png" alt="" />
+						<div class="a">
+							<a href="">養生</a>
+						</div>
+					</li>
+					<li>
+						<img src="image/05.png" alt="" />
+						<div class="a">
+							<a href="">小景</a>
+						</div>
+					</li>
+					<li>
+						<img src="image/06.png" alt="" />
+						<div class="a">
+							<a href="">東西</a>
+						</div>
+					</li>
+					<li>
+						<img src="image/07.png" alt="" />
+						<div class="a">
+							<a href="">大公報</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--导航条-->
+		<div class="dao">
+			<div class="farm">
+				<ul class="wawa">
+					<li id="gg"><a href="">
+						<div class="cc"></div>
+						首頁
+					</a></li>
+					<li class="dd" id="gg">
+						<a href="">
+							港聞
+							<ul class="last">
+								<li><a href="">新闻</a></li>
+								<li><a href="">圖集</a></li>
+								<li><a href="">視頻</a></li>
+							</ul>
+						</a>
+					</li>
+					<li id="gg"><a href="">內地</a></li>
+					<li id="gg"><a href="">台灣</a></li>
+					<li id="gg"><a href="">國際</a></li>
+					<li id="gg"><a href="">評論</a></li>
+					<li id="gg"><a href="">經濟</a></li>
+					<li id="gg"><a href="">文化</a></li>
+					<li id="gg"><a href="">旅遊</a></li>
+					<li id="gg"><a href="">體育</a></li>
+					<li id="gg"><a href="">娛樂</a></li>
+					<li id="gg"><a href="">宗教</a></li>
+					<li id="gg"><a href="">国学</a></li>
+				</ul>
+				<ul class="papa">
+					<li><a href="">简</a></li>
+					<li><div style="background: url(3.png)100% 10% no-repeat;"></div></li>
+					<li><div style="background: url(3.png)100% 25% no-repeat;"></div></li>
+					<li><div style="background: url(3.png)100% 40% no-repeat;"></div></li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(".wawa #gg").hover(function(){
+					$(this).css({"background":"#e74d3d"},{"color":"#fff"})
+				},function(){
+					$(this).css({"background":"#494949"},{"color":"#ddd"})
+				})
+				$(".dd").hover(function(){
+					$(".last").slideDown()
+				},function(){
+					$(".last").slideUp()
+				})
+			})
+		</script>
+		<!--轮播图-->
+		<div class="logo">
+			<div class="lun">
+				<div><img src="http://img.takungpao.com/2019/0320/20190320080944700.jpg" alt="" /></div>
+				<div><img src="http://img.takungpao.com/2019/0320/20190320072707229.jpg" alt="" /></div>
+				<div><img src="http://img.takungpao.com/2019/0320/20190320081836844.jpg" alt="" /></div>
+				<div><img src="http://img.takungpao.com/2019/0320/20190320073033691.jpg" alt="" /></div>
+				<div><img src="http://img.takungpao.com/2019/0320/20190320073302277.jpg" alt="" /></div>
+				<ul class="oo">
+					<li><span></span></li>
+					<li><span></span></li>
+					<li><span></span></li>
+					<li><span></span></li>
+					<li><span></span></li>
+				</ul>
+				<button></button>
+				<button></button>
+			</div>
+			<div class="menu">
+				<div class="menu-top">
+					<h2><a href="" class="jj">即時新聞</a></h2>
+					<div class="slide"></div>
+				</div>
+				<div class="menu-file">
+					<div class="kie">
+						<span class="tlt">雨岸</span>
+						<p class="rr">高雄市長韓國瑜今日（22日）早晨率28人訪問團飛抵香港，展開一連七日的港澳大陸「經濟之旅」。</p>
+					</div>
+					<div class="kie">
+						<span class="tlt">内地</span>
+						<p class="rr">李克強總理考察財政部時指出，讓減稅的真金白銀，切實落到企業的口袋。</p>
+					</div>
+					
+					<div class="kie">
+						<span class="tlt">内地</span>
+						<p class="rr">21日，江蘇鹽城市響水縣一化工企業廠區內發生爆炸，事故造成6人死亡、30人重傷。</p>
+					</div>
+					<div class="kie">
+						<span class="tlt">港台</span>
+						<p class="rr">反對派議員郭榮鏗、莫乃光近日已飛赴美國，展開「賣港之旅」。等返回香港，應受譴責。</p>
+					</div><div class="kie">
+						<span class="tlt">国际</span>
+						<p class="rr">新西蘭槍店此後禁止出售軍事級別半自動武器，當局也將斥資1到2億新西蘭元回購違禁武器。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(".kie").hover(function(){
+					$(this).css({"background":"#f8f8f8"}).children(".rr").css({"color":"#c8a063"})
+				},function(){
+					$(this).css({"background":"#fff"}).children(".rr").css({"color":"limegreen"})
+				})
+			})
+		</script>
+		<!--<div class="hh">
+			<div>
+				<img src="" alt="" />
+				
+			</div>
+			<div>
+				<ul>
+					<li>
+						<img src="" alt="" />
+					</li>
+					
+				</ul>
+			</div>
+		</div>-->
+		<!--数据-->
+		<div class="type" id="type">
+			
+		</div>
+		
+		<!--底部-->
+		<div class="bottom">
+			<div class="bottom-farm">
+				<div class="bottom-top">
+					<ul>
+						<li><a href="">關於大公網&nbsp;|</a></li>
+						<li><a href="">法律聲明&nbsp;|</a></li>
+						<li><a href="">廣告政策&nbsp;|</a></li>
+						<li><a href="">聯絡我們&nbsp;|</a></li>
+						<li><a href="">2019年3月21日</a></li>
+					</ul>
+					
+				</div>
+				<div class="bottom-after">承印商名稱：三友印務有限公司  地址：香港香港仔田灣海旁道7號興偉中心2-3樓</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	$(function(){
+		$.ajax({
+			type:"get",
+			url:"111.json",
+			async:true,
+			success:function(data){
+				fn(data)
+			}
+		});
+		function fn(data){
+			var arr=data.box;
+			console.log(arr)
+			var st=""
+			for(var i=0;i<arr.length;i++){
+				st+="<div class='list'>"
+					st+"<div class='top'>"
+						st+"<div class='kn'>"
+							st+="<img src='"+arr[i].img+"'/>"
+						st+"</div>"
+						st+="<div class='ff'>"+arr[i].picx+"</div>"
+					st+"</div>"
+					st+"<div class='middle'>"
+						st+="<h3>"+arr[i].title+"</h3>"
+					st+"</div>"
+					st+"<div class='artice'>"
+						st+="<p>"+arr[i].mall+"</p>"
+					st+"</div>"
+					st+="<div class='bum'>"+arr[i].btm+"</div>"
+				st+="</div>"
+			}
+			$("#type").html(st)
+		}
+	})
+	$(function(){
+		var t=null,index=0;
+		t=setInterval(slide,2000);
+		$(".lun").hover(function(){
+			clearInterval(t),
+			$(".lun button").show()
+			},function(){
+				t=setInterval(slide,2000),
+				$(".lun button").hide()
+			})
+		$(".oo>li").click(function(){
+			var num=$(this).index()
+			$(this).css("background","red").siblings("li").css("background","#333").parent(".oo").siblings("div").eq(num).show().siblings("div").hide();
+			index=num;
+			})
+		$(".lun button").click(function(){
+			var m=$(this).index(".lun button")
+			switch(m){
+				case 0:
+					index--;
+					if(index<0){index=4};
+					$(".lun>div").eq(index).show().siblings("div").hide().siblings("ul").children("li").eq(index).css("background","red").siblings("li").css("background","#333");
+					break;
+				case 1:
+					index++;
+					if(index>4){index=0};
+					$(".lun>div").eq(index).show().siblings("div").hide().siblings("ul").children("li").eq(index).css("background","red").siblings("li").css("background","#333")
+					break;
+				}
+			})
+		function slide(){
+			$(".lun>div").eq(index).show().siblings("div").hide().siblings(".oo").children("li").eq(index).css("background","red").siblings("li").css("background","#333")
+			index++;
+			if(index>4){index=0}
+		}
+	})
+</script>
