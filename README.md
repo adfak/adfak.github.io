@@ -1,1 +1,0 @@
-# adfak.github.io
