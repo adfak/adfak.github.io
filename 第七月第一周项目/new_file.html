@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>《魔兽争霸官方对战平台》官方论坛 -  Powered by Discuz!</title>
+		<link rel="shortcut icon" href="img/01.png" />
+		<link rel="stylesheet" href="css/new_file.css" />
+		<script src="jq.js"></script>
+	</head>
+	<body>
+		<!--标题-->
+		<div class="title">
+			<div><img src="img/1.png" alt="" /></div>
+		</div>
+		<div class="ps">
+			<!--登录-->
+			<div class="dl">
+				<ul class="zc clearfix">
+					<li>
+						<a href="">登录</a>
+						或
+						<a href="">注册一个战网通行证</a>
+					</li>
+					<li>
+						<a href="">商店</a>
+					</li>
+					<li>
+						<a href="">|</a>
+					</li>
+					<li>
+						<a href="">战网通行证</a>
+					</li>
+				</ul>
+			</div>
+			<!--论坛首页-->
+			<div class="sy">
+				<ul class="lp clearfix">
+					<li class="lt">
+						<a href="">论坛首页</a>
+					</li>
+					<li class="pt">
+						<a href="">平台首页</a>
+					</li>
+				</ul>
+				<span class="dao">
+					<a href="">
+						快捷导航
+					</a>
+					&nbsp;
+					<span>▶</span>
+				</span>
+			</div>
+			<div class="zl">
+				<div class="home">
+					<ul class="clearfix">
+						<li>
+							<span class="ff"></span>
+						</li>
+						<li>
+							<img src="img/20.png" alt="" />
+						</li>
+						<li>
+							<a href="">论坛首页</a>
+						</li>
+					</ul>
+				</div>
+				<div class="jr">
+					<ul class="clearfix">
+						<li>
+							<a href="">
+								<img src="img/19.png" alt="" />
+								今日：21
+							</a>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="">
+								昨日：34
+							</a>
+						</li>
+						<li>
+							|
+						</li>
+						<li>
+							<a href="">帖子：1856</a>
+						</li>
+						<li>
+							|
+						</li>
+						<li>
+							<a href="">会员：48</a>
+						</li>
+						<li>
+							|
+						</li>
+						<li>
+							<a href="">欢迎新会员：秋意浓殇</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					
+				</div>
+			</div>
+		</div>
+			<div class="rr">
+				<div class="bottom">
+					<p>
+						Powered by 
+						<a href="">Discuz!</a>
+						<em>X3.2</em>
+						<strong>
+							<a href="">魔兽争霸官方对战平台</a>(互联网违法和不良信息举报电话：0571-28090163)
+						</strong>
+					</p>
+					<p>
+						© 2001-2013 
+						<a href="">Comsenz Inc.</a>
+						<strong>
+							GMT+8, 2019-4-6 15:40
+							<a href="">, Processed in 0.030424 second(s), 3 queries, Redis On.</a>
+						</strong>
+					</p>
+				</div>
+			</div>
+	</body>
+</html>
+<script>
+		$(function(){
+			function ajax(methods,url,sync,fn){
+				var xmlhttp=new XMLHttpRequest();
+				xmlhttp.open(methods,url,sync)
+				xmlhttp.send()
+				xmlhttp.onreadystatechange=function(){
+					if(xmlhttp.readyState==4){
+						if(xmlhttp.status==200){
+							fn(xmlhttp.responseText)
+						}	
+					}	
+				}
+			}
+		ajax("get","01.json",true,ff)
+				function ff(data){
+					var arr=JSON.parse(data);
+					console.log(arr)
+					var st=""
+					for(var i=0;i<arr.length;i++){
+						st+="<div class='text'>"
+							st+="<div class='text-top'>"
+								st+="<h2>"+arr[i].title+"</h2>"
+							st+="</div>"
+							for(var j=0;j<arr[i].child.length;j++){
+								st+="<div class='white'>"
+									st+="<div class='kuang'>"
+										st+="<img src='"+arr[i].child[j].img+"'/>"
+										st+="<div class='zi'>"
+											st+="<h3>"+arr[i].child[j].hit+"</h3>"
+											st+="<span>"+arr[i].child[j].zt+"</span>"
+											st+="<dl>"+arr[i].child[j].pic+"</dl>"
+											st+="<p>"+arr[i].child[j].ppp+"</p>"
+										st+="</div>"
+									st+="</div>"
+								st+="</div>"
+							}
+							
+						st+="</div>"
+					}
+					$(".box").html(st)
+			}
+			
+		});
+</script>
